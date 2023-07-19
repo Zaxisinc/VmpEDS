@@ -1,0 +1,582 @@
+$ EZ-EDS Version 3.29.1.20210209 Generated Electronic Data Sheet
+
+$ Zaxis Variable Metered Pump (VMP) Version 1.0
+
+[File]
+        DescText = "EDS file for Variable Metered Pump";
+        CreateDate = 08-22-2022;
+        CreateTime = 17:47:00;
+        ModDate = 08-22-2022;
+        ModTime = 17:47:04;
+        Revision = 1.4;
+        HomeURL = "zaxisinc.com";
+        1_IOC_Details_License = 0x19D03721;
+
+[Device]
+        VendCode = 1449;                $ 1449 = 0x5A9
+        VendName = "Zaxis Inc.";
+        ProdType = 43;                  $ 43 = 0x2B - Generic Device
+        ProdTypeStr = "Generic Device";
+        ProdCode = 17;
+        MajRev = 1;
+        MinRev = 4;
+        ProdName = "VMP Zaxis Variable Metering Pump";
+        Catalog = "VMP_1_4";
+        Icon = "zaxislogo.ico";
+        IconContents =
+                "AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQA"
+                "AMMOAADDDgAAAAAAAAAAAAAZN/3iGzr9xR9F+mklVvYeSLrUATOE6QAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAB485EA//8AAC5k7wwqWPUIGj37gRYx//gX"
+                "Mf/4GTf+zR1A/HwjUPkrL3LvCNP/hgCz/9gAVabtAS9x8QgmV/UlI1D2Qx1D"
+                "/HAdPv2dIEP9JyRV8xAZN/2rFS///xYx//oWMP78GDT84Ro6/rEbPvqSGz74"
+                "jBs9/JUbOvuuGTb61Bg0/OUXMvj0HT/4lCFM/w4YMv8AHkX4Mhcz/uAbPP+7"
+                "FS/AtQkUcf4UK+r/DyCx/wcPWP8PILD+ChZ7/goUbPEKFW7yCRJN7QsXK5sZ"
+                "N1MMJ2HvAAAA/wAaOvx2GDX/0hg2j1QECRPoESeR8AoUVPcBAgD/CBA7+AUK"
+                "HO8HDxm8BAkP5gUKEOcCBQjoCxUlOAAAAAAgR/gAIUv3Fxg1/sMbO+x7BgsR"
+                "xAIEBf8CAwX9CRUl2AMGCfsFChHSCRIehwULFMwSJ0ZuAwYL4wcPGUQAAAAA"
+                "MI7bAA4U/wAaO/tkGjj/sQoWLaIHDRbxBQoR7w4gOYQECA/mCBEesAgSIG8F"
+                "CQ/ECREdmQQID9IQJEIfAAAAAAAAAAAfR/cAH0j2GRo4/7YRJnacCBAa5wcO"
+                "GeIRJEFjAwcM5QYNGMcJFCV3BQkQ2gUJEN0KFiiAOo3/BwAAAAAAAAAAKV/u"
+                "AAAA/wAaOf9/GDTBrAQHC+4ECRDdDyM/fAQHDPgFChLrCRUnoAQIDuQDBwzq"
+                "Bw8byg8hOz0AAAAAAAAAAFL/rAAZNv0AGz39QRo47LIJEybPCBMivA4fOZQK"
+                "FijTChcqzgkUJb4GDxzCCBEftwQIDugLFyo8AAAAAAAAAAAAAAAAH0b3AB1C"
+                "+BUaN/yiGkCoRhY8bSYaQ34pGD1yKRc/dCkRL1koDyhNIBg6ayATMFk8GDlp"
+                "Cy165wALAP8AJlb1ESFL+DYkUvcmGjn8mRw6/TMcOv0AAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAZNf4AIUv3Kxo5/bcYM//wGTb+2xg0/uAa"
+                "OP1JGTT+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIU31GRo6"
+                "/bAYNv7kFzP+7xUv//8WL//9Gzf+WBcx/wAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAAAAAAAAAAB5D+mIeQvt5I1L4JR9I+UYZN/3DFjD//xk2/WYVLf8A"
+                "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkUvgaKWLxCClj8QAP"
+                "H/8AIU71LRw6/MIePfxZHDb/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                "AAAAAAAAB/wAAAGAAAAAAAAAgAAAAMAAAADAAAAA4AAAAOAAAADwAAAA8AAA"
+                "APAAAADB/wAAgf8AAAH/AAAB/wAAMf8AAA==";
+
+[Device Classification]
+        Class1 = EtherNetIP;
+
+[Params]
+        Param1 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0004,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "RPI Range",            $ name
+                "",                     $ units
+                "This parameter limits the range of the RPI (Requested Packet Interval) value",    $ help string
+                10000,9000000,500000,   $ min, max, default data values
+                1,1000,1,0,             $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                1;                      $ decimal places
+        Param2 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "CosType",              $ name
+                "",                     $ units
+                "New Help String",      $ help string
+                ,,15,                   $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param3 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "ClassId",              $ name
+                "",                     $ units
+                "Class/Assembly Id",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param4 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Attribute",            $ name
+                "",                     $ units
+                "Class/Assembly Attribute Number",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param5 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "CfgVersion",           $ name
+                "",                     $ units
+                "Object version",       $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param6 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "CfgLength",            $ name
+                "",                     $ units
+                "Object length in bytes",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param7 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Instance",             $ name
+                "",                     $ units
+                "Object Instance",      $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param10 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "SpareByte1",           $ name
+                "",                     $ units
+                "Sjpare byte",          $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param11 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "SpareByte2",           $ name
+                "",                     $ units
+                "Spare Byte",           $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param15 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "SpareInt1",            $ name
+                "",                     $ units
+                "Spare",                $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param16 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "SpareInt2",            $ name
+                "",                     $ units
+                "Spare",                $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param17 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "SpareInt3",            $ name
+                "",                     $ units
+                "Spare",                $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param20 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "SpareDint1",           $ name
+                "",                     $ units
+                "Spare",                $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param21 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "SpareDint2",           $ name
+                "",                     $ units
+                "Spare",                $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param22 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "SpareDint3",           $ name
+                "",                     $ units
+                "Spare",                $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+
+        Param101 =                      $ Initial configuration data
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD1,                   $ Data Type - Bit string 8 bits
+                1,                      $ Data Size in bytes
+                "Vmp_Cfg",              $ Pump initialization flags
+                "",                     $ units
+                "Initial Connection Data",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum101 =                       $ Bit positions
+                0,"ReadyInterlock",
+                1,"EthernetRunRead",
+                2,"Spare1_2",
+                3,"Spare1_3",
+                4,"Spare1_4",
+                5,"Spare1_5",
+                6,"Spare1_6",
+                7,"Spare1_7";
+
+        Param102 =                      $ Initial configuration data
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type - 0xC6 = Unsigned 8-bit integer
+                1,                      $ Data Size in bytes
+                "DecPlaces",            $ Spare Pump initialization flags
+                "",                     $ units
+                "",                     $ help string
+                0,5,5,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param201 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD3,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Cmd",                  $ name
+                "",                     $ units
+                "Commands from the PLC",$ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum201 =
+                0,"OkToRun",
+                1,"Start",
+                2,"Abort",
+                3,"DirectionCC",
+                4,"ContinuousRun",
+                5,"SetMaxShotSize",
+                6,"SetShotSize",
+                7,"IgnoreCmds",
+                8,"IncFineAdj",
+                9,"DecFineAdj",
+                10,"ResetRevsCnt",
+                11,"SpareBit_11",
+                12,"SetRevolutions",
+                13,"SetRpm",
+                14,"ZeroFineAdj",
+                15,"ZinchMode",
+                16,"ClearFaults",
+                17,"SetDesiredVolume",
+                18,"StatusGet",
+                19,"ChangeHead";
+
+        Param202 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "CurrentProgram",       $ name
+                "",                     $ units
+                "Program to run",       $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param203 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type - Unsigned 32-bit integer
+                2,                      $ Data Size in bytes
+                "Revolutions",          $ name
+                "",                     $ units
+                "Number of Revolutions",$ help string
+                ,,1,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param204 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Volume",               $ name
+                "",                     $ units
+                "Volume",               $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                4;                      $ decimal places
+        Param205 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type - Unsigned 32-bit integer
+                2,                      $ Data Size in bytes
+                "Rpm",                  $ name
+                "",                     $ units
+                "Revolutions per min.", $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param214 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "FineAdj",              $ name
+                "",                     $ units
+                "Fine adjustment",      $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+
+        Param301 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xD3,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "CurStatus",            $ name
+                "",                     $ units
+                "Current status of Pump",    $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum301 =
+                0,"Ready",
+                1,"Running",
+                2,"Abort",
+                3,"DirectionCC",
+                4,"ContinuousRun",
+                5,"MotorRunning",
+                6,"AtMaxShot",
+                7,"CmdAck",
+                8,"BadVolume",
+                9,"AtShotSize",
+                10,"InLinkDelay",
+                11,"InZincMode",
+                12,"SpareBit#12",
+                13,"SpareBit#13",
+                14,"SpareBit#14",
+                15,"SpareBit#15",
+                16,"SpareBit#16",
+                17,"SpareBit#17",
+                18,"SpareBit#18",
+                19,"SpareBit#19",
+                20,"SpareBit#20",
+                21,"SpareBit#21",
+                22,"SpareBit#22",
+                23,"SpareBit#23",
+                24,"SpareBit#24",
+                25,"SpareBit#25",
+                26,"SpareBit#26",
+                27,"SpareBit#27",
+                28,"FaultDispenseSensor",
+                29,"FaultDispenseMotor",
+                30,"FaultAdjustMotor",
+                31,"FaultAdjustSensor";
+
+        Param303 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC3,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "CurrentRevolution",    $ name
+                "",                     $ units
+                "Number of Revolutions",$ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param304 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "CurrentVolume",        $ name
+                "",                     $ units
+                "Volume",               $ help string
+                ,,0,
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                4;                      $ decimal places
+        Param310 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "DesiredVolume",        $ name
+                "",                     $ units
+                "Volume wanted",        $ help string
+                ,,0,                    $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+[Assembly]
+        Object_Name = "Assembly Object";
+        Object_Class_Code = 0x04;
+        Assem100 =
+                "VMP Cfg",              $ Name T->O (Configuration sent to Pump on connection)
+                ,                       $ Path
+                ,                       $ Size in bytes
+                0x0000,                 $ Descriptor - bit field
+                ,,                      $ Reserved, Reserved
+                                        $ Member Size, Member Reference
+                8,Param101,             $ VmpInit Bits
+                8,Param10,
+                16,Param2,
+                16,Param15,
+                16,Param16;
+        Assem200 =
+                "VMP OUT",
+                ,
+                ,
+                0x0000,
+                ,,
+                32,Param201,            $ PlcCmd Bits
+                32,Param204,
+                32,Param20,
+                16,Param202,
+                16,Param203,
+                16,Param205,
+                16,Param214,
+                16,Param15,
+                16,Param16;
+        Assem300 =
+                "VMP IN",
+                ,
+                ,
+                0x0000,
+                ,,
+                16,Param2,
+                16,Param3,
+                16,Param7,
+                16,Param4,
+                16,Param5,
+                16,Param6,
+                32,Param301,            $ VmpStatus bits
+                16,Param202,
+                16,Param203,
+                16,Param205,
+                16,Param214,
+                16,Param303,
+                16,Param15,
+                32,Param304,            $ Volume
+                32,Param310,            $ Spare
+                32,Param20;
+
+[Connection Manager]
+        Object_Name = "Connection Manager Object";
+        Object_Class_Code = 0x06;
+        Connection1 =
+                0x04020002,             $ 0-15    = supported transport classes
+                                        $ 16      = trigger: cyclic
+                                        $ 17      = trigger: change of state
+                                        $ 18      = trigger: application
+                                        $ 19-23   = trigger: reserved
+                                        $ 24      = transport type: listen-only
+                                        $ 25      = transport type: input-only
+                                        $ 26      = transport type: exclusive-owner
+                                        $ 27      = transport type: redundant-owner
+                                        $ 28-30   = reserved
+                                        $ 31      = Client = 0 / Server = 1
+                0x44440405,             $ 0       = O->T fixed size supported
+                                        $ 1       = O->T variable size supported
+                                        $ 2       = T->O fixed size supported
+                                        $ 3       = T->O variable size supported
+                                        $ 4-5     = O->T number of bytes per slot (obsolete)
+                                        $ 6-7     = T->O number of bytes per slot (obsolete)
+                                        $ 8-10    = O->T Real time transfer format
+                                        $ 11      = reserved
+                                        $ 12-14   = T->O Real time transfer format
+                                        $ 15      = reserved
+                                        $ 16      = O->T connection type: NULL
+                                        $ 17      = O->T connection type: MULTICAST
+                                        $ 18      = O->T connection type: POINT2POINT
+                                        $ 19      = O->T connection type: reserved
+                                        $ 20      = T->O connection type: NULL
+                                        $ 21      = T->O connection type: MULTICAST
+                                        $ 22      = T->O connection type: POINT2POINT
+                                        $ 23      = T->O connection type: reserved
+                                        $ 24      = O->T priority: LOW
+                                        $ 25      = O->T priority: HIGH
+                                        $ 26      = O->T priority: SCHEDULED
+                                        $ 27      = O->T priority: reserved
+                                        $ 28      = T->O priority: LOW
+                                        $ 29      = T->O priority: HIGH
+                                        $ 30      = T->O priority: SCHEDULED
+                                        $ 31      = T->O priority: reserved
+                Param1,,Assem200,       $ O->T RPI, size, format
+                Param1,,Assem300,       $ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                ,Assem100,              $ target config size, format
+                "VMP I/O Connection",   $ Connection Name
+                "",                     $ help string
+                "20 04 24 04 2C 02 2C 01";    $ Path
+
