@@ -6,9 +6,9 @@ $ Zaxis Variable Metered Pump (VMP) Version 1.0
         DescText = "EDS file for Variable Metered Pump";
         CreateDate = 08-22-2022;
         CreateTime = 17:47:00;
-        ModDate = 08-22-2022;
-        ModTime = 17:47:04;
-        Revision = 1.4;
+        ModDate = 09-18-2023;
+        ModTime = 23:21:10;
+        Revision = 1.41;
         HomeURL = "zaxisinc.com";
         1_IOC_Details_License = 0x19D03721;
 
@@ -251,7 +251,6 @@ $ Zaxis Variable Metered Pump (VMP) Version 1.0
                 ,,,,                    $ mult, div, base, offset links
                 ;                       $ decimal places
 
-
         Param101 =                      $ Initial configuration data
                 0,                      $ reserved, shall equal 0
                 ,,                      $ Link Path Size, Link Path
@@ -322,7 +321,18 @@ $ Zaxis Variable Metered Pump (VMP) Version 1.0
                 16,"ClearFaults",
                 17,"SetDesiredVolume",
                 18,"StatusGet",
-                19,"ChangeHead";
+                19,"ChangeHead",
+                20,"SetBoreSize",
+                21,"SpareBit_21",
+                22,"SpareBit_22",
+                23,"SpareBit_23",
+                24,"SpareBit_24",
+                25,"SpareBit_25",
+                26,"SpareBit_26",
+                27,"SpareBit_27",
+                28,"SpareBit_28",
+                29,"SpareBit_29",
+                30,"RefreshTsi";
 
         Param202 =
                 0,                      $ reserved, shall equal 0
@@ -417,8 +427,8 @@ $ Zaxis Variable Metered Pump (VMP) Version 1.0
                 9,"AtShotSize",
                 10,"InLinkDelay",
                 11,"InZincMode",
-                12,"SpareBit#12",
-                13,"SpareBit#13",
+                12,"InChangeHeadMode",
+                13,"BoreSizeSet",
                 14,"SpareBit#14",
                 15,"SpareBit#15",
                 16,"SpareBit#16",
@@ -477,6 +487,19 @@ $ Zaxis Variable Metered Pump (VMP) Version 1.0
                 ,,,,                    $ mult, div, base, offset scaling
                 ,,,,                    $ mult, div, base, offset links
                 ;                       $ decimal places
+        Param311 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC4,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "BoreSize",             $ name
+                "",                     $ units
+                "Current bore size",    $ help string
+                1250,10000,5000,        $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
 
 [Assembly]
         Object_Name = "Assembly Object";
@@ -528,8 +551,8 @@ $ Zaxis Variable Metered Pump (VMP) Version 1.0
                 16,Param303,
                 16,Param15,
                 32,Param304,            $ Volume
-                32,Param310,            $ Spare
-                32,Param20;
+                32,Param310,
+                32,Param311;
 
 [Connection Manager]
         Object_Name = "Connection Manager Object";
